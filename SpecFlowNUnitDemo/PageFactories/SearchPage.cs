@@ -42,7 +42,7 @@ namespace SpecFlowNUnitDemo.PageFactories
         }
         public void VerifySearchResult()
         {
-            System.Console.WriteLine("Just test team city");
+      //      System.Console.WriteLine("Just test team city");
             true.Equals(webDriver.FindElement(By.PartialLinkText(searchResult)).Displayed);
         }
         #endregion
