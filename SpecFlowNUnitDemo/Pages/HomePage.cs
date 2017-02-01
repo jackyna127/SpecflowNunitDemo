@@ -1,5 +1,6 @@
 ﻿using Baseclass.Contrib.SpecFlow.Selenium.NUnit.Bindings;
 using OpenQA.Selenium;
+using OpenQA.Selenium.PhantomJS;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,9 +15,9 @@ namespace SpecFlowNUnitDemo.Pages
         public HomePage()
             : base()
         {
-            var appSettings = ConfigurationManager.AppSettings;
-            webDriver.Url = appSettings["BaseUrl"];
-
+           // webDriver = new PhantomJSDriver();
+            webDriver.Url = baseUrl;
+            webDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(secondTimeOut));
         }
         #region Elements
 

@@ -8,6 +8,8 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.PhantomJS;
 namespace SpecFlowNUnitDemo.Pages
 {
 
@@ -16,6 +18,7 @@ namespace SpecFlowNUnitDemo.Pages
     {
         protected int secondTimeOut;
         protected IWebDriver webDriver;
+        protected string baseUrl;
         public BasePage()
         {
             var appSettings = ConfigurationManager.AppSettings;
@@ -23,7 +26,8 @@ namespace SpecFlowNUnitDemo.Pages
             Browser.Current.Manage().Window.Maximize();
             webDriver = Browser.Current;
             secondTimeOut = Convert.ToInt32(appSettings["TimeOut"]);
-            webDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(secondTimeOut));
+            baseUrl = appSettings["BaseUrl"];
+            
         }
 
         public void WaitForPageElement(By byElement)

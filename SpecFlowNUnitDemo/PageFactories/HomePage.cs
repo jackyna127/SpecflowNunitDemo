@@ -18,6 +18,7 @@ namespace SpecFlowNUnitDemo.PageFactories
             PageFactory.InitElements(Browser.Current, this);
             var appSettings = ConfigurationManager.AppSettings;
             webDriver.Url = appSettings["BaseUrl"];
+         
         }
         #region Elements
         [FindsBy(How = How.LinkText, Using = "Contact Us")]

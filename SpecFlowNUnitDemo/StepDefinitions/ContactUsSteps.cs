@@ -1,5 +1,5 @@
-﻿using SpecFlowNUnitDemo.PageFactories;
-//using SpecFlowNUnitDemo.Pages;
+﻿//using SpecFlowNUnitDemo.PageFactories;
+using SpecFlowNUnitDemo.Pages;
 using System;
 using TechTalk.SpecFlow;
 namespace SpecFlowNUnitDemo.StepDefinitions

@@ -14,6 +14,7 @@ namespace SpecFlowNUnitDemo.Pages
             : base()
         {
             searchResult = "";
+           // webDriver.Url = baseUrl;
             webDriver = Browser.Current;
         }
 
