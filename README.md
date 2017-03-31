@@ -1,5 +1,5 @@
 # SpecflowNunitDemo
-It is a automated framework about BDD testing with multiple browser, specflow, selenium web driver and NUnit in Visual Studio.
+It is an automated framework about BDD testing with multiple browser, specflow, selenium web driver and NUnit in Visual Studio.
 It uses BaseClass.Contrib.Specflow.Selenium.NUnit.New to implement multiple browser.
 
 It provides two kinds of page object model:
